@@ -124,7 +124,7 @@ def sentiment_map(doc,
     >>> sentiment_map('it was a terrible waste of time')
     [('negative', 1), ('negative', 1)]
     """
-      results = []
+    results = []
     for token in doc.split():
         if token in pos_terms:
             results.append(('positive', 1))
