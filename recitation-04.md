@@ -37,6 +37,7 @@ To use this function to count words, you'll need to implement your own `map_f` a
 4. Assume that a word `w` appears `n` times. What is the **work** and **span** of `word_count_reduce` for this word, assuming a parallel implementation of the `reduce` function?
 
 **Enter answer here**
+Work = Θ(n), Span = Θ(log n)
 
 
 5. Why are we going through all this trouble? Couldn't I just use this function to count words?
@@ -53,7 +54,7 @@ for doc in docs:
 What is the problem that prevents us from easily parallelizing this solution?
 
 **Enter answer here**
-
+Because the dictionary based solution relies on shared mutable state, which is hard to parallelize safely. Map-reduce avoids this by structuring the computation into parallelizable map and reduce phases.
 
 ## Part 2: Sentiment analysis
 
