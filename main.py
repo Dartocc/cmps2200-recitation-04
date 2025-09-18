@@ -53,7 +53,7 @@ def word_count_reduce(group):
     
     NOTE: you should use call the `reduce` function here.
     """
-     token, ones = group
+    token, ones = group
     count = reduce(lambda x, y: x + y, 0, ones)
     return (token, count)
     
